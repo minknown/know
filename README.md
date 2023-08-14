@@ -2,6 +2,7 @@
 存放近期要学习的点，辅助知识，核心知识，以及其他工具类和教程。
 
 ## 近期要学习的点
+* druid
 * 正向代理和反向代理
 * kaka消息队列
 * Springclound
@@ -36,6 +37,18 @@
 * 学会：plus\多参\注解开发 * 注意：mybaits-config中typeAliases可以设置扫面描后， resultType="User"无需填写包名
 * 注意：在Main或者Boot-App入口，设置@MapperScan("com.mayizt.mapper")[接口目录],可避免找不到接口的错误
 * 注意：mysql-connector-java:jar:unknown was not错误：在pom中为mysql驱动指定版本
+  
+## 辅助知识-Linux运维
+* 服务器选型centos7.8(7.6-7.9)，可使用bt辅助。
+* 能够了解目录接口，了解文件操作、基本地查看内存和用户、网络设置。
+* com笔记版:tree,tail,cat\vim\启动服务，压缩tar/zip/rar。chmod提权/sh执行shell。shutdown -h now关机reboot重启。
+* shell笔记版:{$x}变量，&>输出,[]运算，路径PATH/USER/time/$?，function,for,read p,echo颜色。ifthen(-eq -z -f)
+* 服务：systemctl status/stop.start/disable.enable firewalld/httpd，ps -ef | grep name
+* 备份：cron+tar即可
+* 部署：apache\nginx\tomcat,对应目录htdoc\html\.webapps,目录提供错误访客日志,conf,bin.
+* 安装前：sudo yum update,set firewalld. wget+JCC
+* 安装中：http://nginx.org/en/linux_packages.html,yum install httpd,gar-tomcat(down:bin)
+* 注意：tomcat安装方式为tar解压-->usr/local。且需要先安装JAVA+环境配置。
 
 ## 辅助知识-简单压测
 * 使用阿里云压测，了解TPS\QPS\RT\SL（成功率稳定性）（压测成本10000/50元，比Jmeter有效且可以模拟多地多IP）
@@ -61,7 +74,9 @@ exe4j:https://exe4j.apponic.com/
 2. 网盘备份：Googdriver->Dropbox->ftpbox.org    
   *(前者最大15GB，后两者均为双向自动同步)*
 3. 宣称协助工具：todesk、向日葵，电话使用微信或QQ等
-4. VPM：https://m-n.cc/NzAIGFv 
+4. VPM：https://m-n.cc/NzAIGFv
+5. MAVEN:https://mvnrepository.com   
+6. 镜像：暂无  
 
 
 ## 其他-工具箱
