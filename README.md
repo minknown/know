@@ -100,6 +100,7 @@ exe4j:https://exe4j.apponic.com/
 |知识|教程入口|
 |----|----|
 |Github|https://www.bilibili.com/video/BV19b4y1p72S |
+|GithubM|https://backlog.com/git-tutorial/cn |
 |Redis|https://www.bilibili.com/video/BV1Dh411D7cW |
 |Laravel|https://www.bilibili.com/video/BV1V4411h7JE |
 |Mybaits|https://www.bilibili.com/video/BV12R4y157Be |
