@@ -11,7 +11,7 @@
 
 ## 其他-指定索引
 1. 问题解决：LogorBug->Google->StackOverflow->QQ->CSDN->联络员
-2. 项目结构：MVC\MSC *(Utils建议写入Ctrl控制包中，Java视图类写在static下)*
+2. 项目结构：MVC\MSC *(M即模型Dao,里面包括mapper和pojo,Utils建议写入Ctrl控制包中，Java视图类写在static下)*
 3. 网盘备份：Googdriver->Dropbox->ftpbox.org    
   *(前者最大15GB，后两者均为双向自动同步)*
 4. 远程协助工具：todesk、向日葵，电话使用微信或QQ等
