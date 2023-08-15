@@ -2,12 +2,24 @@
 存放近期要学习的点，辅助知识，核心知识，以及其他工具类和教程。
 
 ## 近期要学习的点
-* druid
 * 正向代理和反向代理
 * kaka消息队列
 * Springclound
 * 英语和学历问题
+* 周期性复习：文件上传、OSS、IOC、tomcat  
 
+
+## 其他-指定索引
+1. 问题解决：LogorBug->Google->StackOverflow->QQ->CSDN->联络员
+2. 项目结构：MVC\MSC *(Utils建议写入Ctrl控制包中，Java视图类写在static下)*
+3. 网盘备份：Googdriver->Dropbox->ftpbox.org    
+  *(前者最大15GB，后两者均为双向自动同步)*
+4. 远程协助工具：todesk、向日葵，电话使用微信或QQ等
+5. VPM：https://m-n.cc/NzAIGFv
+6. MAVEN:https://mvnrepository.com   
+7. 镜像站点：暂无
+
+   
 ## 核心知识-SQL
 
 **ElasticSearch**  :*暂无*  
@@ -68,16 +80,6 @@ JAVA:JAVAFX(之前使用awt,后面swing,现在用javafx,就好像springboot淘�
 具体教程：https://www.bilibili.com/video/BV1W24y1y7wd  
 scene-builder:https://openjfx.cn/scene-builder/#download  
 exe4j:https://exe4j.apponic.com/  
-
-## 其他-指定索引
-1. 问题解决：LogorBug->Google->StackOverflow->QQ->CSDN->联络员
-2. 网盘备份：Googdriver->Dropbox->ftpbox.org    
-  *(前者最大15GB，后两者均为双向自动同步)*
-3. 宣称协助工具：todesk、向日葵，电话使用微信或QQ等
-4. VPM：https://m-n.cc/NzAIGFv
-5. MAVEN:https://mvnrepository.com   
-6. 镜像：暂无  
-
 
 ## 其他-工具箱
 *(注意:HBuilderX实时预览md时加入charset=UTF-8解决中文乱码问题)* 
