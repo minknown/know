@@ -5,8 +5,8 @@
 * kaka消息队列
 * Springclound
 * 周期性复习：文件上传、OSS、IOC、tomcat  
-* 英语和学历问题
-* 
+* 英语、学历、互补性原理问题
+  
 ## 其他-指定索引
 1. 问题解决：LogorBug->Google->StackOverflow->QQ->CSDN->联络员
 2. 项目结构：MVC\MSC *(M即模型Dao,里面包括mapper和pojo,Utils建议写入Ctrl控制包中，Java视图类写在static下)*
