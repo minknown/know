@@ -1,5 +1,5 @@
 # know
-存放近期要学习的点，辅助知识，核心知识，以及其他工具类和教程。
+存放近期要学习的点，辅助知识，核心知识，以及指定索引、其他工具类和教程。
 
 ## 近期要学习的点
 * 正向代理和反向代理
@@ -8,19 +8,17 @@
 * 英语和学历问题
 * 周期性复习：文件上传、OSS、IOC、tomcat  
 
-## 搭建VPN（基于PPTP）
-https://www.youtube.com/watch?v=PdAYlMIyICk  
-使用第三方：PureVpn(推荐)\快连(有限流)\expressvpn(需要配置)  
-
 ## 其他-指定索引
 1. 问题解决：LogorBug->Google->StackOverflow->QQ->CSDN->联络员
 2. 项目结构：MVC\MSC *(M即模型Dao,里面包括mapper和pojo,Utils建议写入Ctrl控制包中，Java视图类写在static下)*
 3. 网盘备份：Googdriver->Dropbox->ftpbox.org    
   *(前者最大15GB，后两者均为双向自动同步)*
 4. 远程协助工具：todesk、向日葵，电话使用微信或QQ等
-5. VPM：https://m-n.cc/NzAIGFv
-6. MAVEN:https://mvnrepository.com   
-7. 镜像站点：暂无
+5. VPM:PureVpn(推荐)\快连(有限流)\expressvpn(需要配置),或者使用linux-pptp自己搭建:https://www.youtube.com/watch?v=PdAYlMIyICk
+6. 内网穿透：向日葵花生壳、NATAPP或者路由器
+7. VPM：https://m-n.cc/NzAIGFv
+8. MAVEN:https://mvnrepository.com   
+9. 镜像站点：暂无
 
    
 ## 核心知识-SQL
