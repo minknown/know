@@ -2,12 +2,11 @@
 存放近期要学习的点，辅助知识，核心知识，以及指定索引、其他工具类和教程。
 
 ## 近期要学习的点
-* 正向代理和反向代理
 * kaka消息队列
 * Springclound
-* 英语和学历问题
 * 周期性复习：文件上传、OSS、IOC、tomcat  
-
+* 英语和学历问题
+* 
 ## 其他-指定索引
 1. 问题解决：LogorBug->Google->StackOverflow->QQ->CSDN->联络员
 2. 项目结构：MVC\MSC *(M即模型Dao,里面包括mapper和pojo,Utils建议写入Ctrl控制包中，Java视图类写在static下)*
