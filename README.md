@@ -8,7 +8,7 @@
 * 英语和学历问题
 * 周期性复习：文件上传、OSS、IOC、tomcat  
 
-##搭建VPN（基于PPTP）
+## 搭建VPN（基于PPTP）
 https://www.youtube.com/watch?v=PdAYlMIyICk  
 使用第三方：PureVpn(推荐)\快连(有限流)\expressvpn(需要配置)  
 
