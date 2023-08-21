@@ -1,5 +1,5 @@
 # know
-存放近期要学习的点，辅助知识，核心知识，以及指定索引、其他工具类和教程。
+知识中心和近期学习计划，以及BUG集合，索引指南、其他工具类和教程。
 
 ## 近期要学习的点
 * kaka消息队列
@@ -21,8 +21,8 @@
 8. 镜像站点：暂无
 
 ## 周期复习榜(简单知识点)
-1.敏捷开发和瀑布开发的区别
-2.SOA:https://www.bilibili.com/video/BV11A411H775 (第五节)
-3.文件上传、OSS和AOP切面编程（第180集）：
+1. 敏捷开发和瀑布开发的区别  
+2. SOA:https://www.bilibili.com/video/BV11A411H775 (第五节)  
+3. 文件上传、OSS和AOP切面编程（第180集）：  
 https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494311c71570646
 4.数据库例程：普通模式下和Springboot模式下。
