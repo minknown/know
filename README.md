@@ -24,5 +24,5 @@
 1. 敏捷开发和瀑布开发的区别  
 2. SOA:https://www.bilibili.com/video/BV11A411H775 (第五节)  
 3. 文件上传、OSS和AOP切面编程（第180集）：  
-https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494311c71570646
-4.数据库例程：普通模式下和Springboot模式下。
+https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494311c71570646  
+4. 数据库例程：普通模式下和Springboot模式下。
