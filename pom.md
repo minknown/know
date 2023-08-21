@@ -1,0 +1,63 @@
+
+## 常用依赖
+*Springboot\mybait创建项目就会自动导依赖,所以这里不列出*  
+*mybaits的包由两个，mybatis时普通项目，mybatis-spring-boot-starter是基于springboot下的mybatis依赖。*  
+**创建项目Springboot必要选择：web+mybaits+lambok+mysql驱动(或redis)**
+
+
+mysql驱动(<Springboot>=2.7.8,mysql驱动>=8)
+````
+	  <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+		//父管版本
+````
+mysql驱动(<Springboot<2.7.8,不限制mysql驱动版本)
+````
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.47</version>
+````
+redis
+````
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+	 //父管版本
+````
+mybaits-plus
+````
+       <groupId>com.baomidou</groupId>
+       <artifactId>mybatis-plus-boot-starter</artifactId>
+       <version>3.4.1</version>
+````
+web
+````
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-web</artifactId>
+		//父管版本
+````
+
+junit
+````
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+````
+hutools
+````
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.16</version>
+````
+lombok
+````
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+````
+druid(springboot需要另一个)
+````
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.11</version>
+````

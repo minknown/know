@@ -1,0 +1,36 @@
+关于Ubuntu:可视化桌面和宝塔兼容性问题的修复解决方案：
+方案由QQ:344251875和本博主共同研究
+该解决方案可能仅适用于Ubuntu 20.04版本和宝塔8.0.0版本。不对其他版本负责。
+
+故障初始环境搭建：
+1）安装ubuntu20.04：
+2）安装可视化桌面：sudo apt-get update、   sudo apt-get install ubuntu-desktop 、reboot.
+     --参见：https://www.itxm.cn/post/gbgcg1a7.html
+3）安装宝塔：访问bt.cn，提供SSH凭证以在线安装。
+    --建议：安装好通过内网VNC进入安装LAMP环境和改宝塔密码、新建一个普通网页。
+4）使用：passwd命令更改ubuntu的密码:既能用来登录桌面，也能用于设置面板的验权。
+5）凭证区域：
+宝塔：http://162.241.69.248:8888/e3c1cc31 (账户密码都是****)  
+SSH：用户root密码 ****  用户Ubuntu密码ubuntu
+
+编辑器必备技能：
+ubuntu使用vi命令编辑文本文件；
+a进入编辑，o增加一行。Esc退出编辑，:q!不保存退出:qw保存退出
+
+故障问题一：主机本身自己上网不了，如可视化桌面网页浏览器打开网页失败。
+故障分析：未配置正确的DNS服务器。
+故障解决：
+1）/etc/resolv.conf的nameserver字段改为8.8.8.8解决。
+2）/etc/init.d/networking restart:重启DNS服务。
+
+故障问题二：主机内网可以，但是对外提供不了HTTP、FTP服务,（核心问题）。
+故障原因：ipbtales模块的影响，与出入口防火墙无关。
+故障解决：
+1）直接 iptables -F解决（禁用）
+使用 iptables -F 之前，先使用 iptables -L 查看策略模式，如果不是 ACCEPT ，那么先修改策略模式。
+运行：iptables -P INPUT ACCEPT，设置为 ACCEPT 策略模式，此时可以使用 iptables -F (先不sudo) 清除所有规则。
+2）当然这是最直接的，最好的还是添加外网访问的端口规则到iptables里面然后再加上白名单就是最完整的方案。
+具体问题再去iptable搜索找资料研究，反正就是这个模块导致的问题。沿着这个方向可以解决问题。
+3)防火墙：
+systemctl stop firewalld
+systemctl disable firewalld（永久）
