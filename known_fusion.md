@@ -18,11 +18,13 @@ yum clean all && yum makecache
 ### 第二步：JAVA环境建设
 Jenkins需要jdk\git\maven才能基本型地运行。  
 所以可通过下边安装JAVA（尾部加-devel才代表JDK）
+````
 java8:sudo yum install -y java-1.8.0-openjdk*-devel
 java18:sudo yum install java-17-openjdk*-devel
-> 通过java -version验证安装
-> 通过find / -name 'java'、which java、whereis java查找jdk安装的位置。
-> 通过yum search java | grep java 搜索java的所有软件包。 
+````
+> 通过java -version验证安装。  
+> 通过find / -name 'java'、which java、whereis java查找jdk安装的位置。  
+> 通过yum search java | grep java 搜索java的所有软件包。  
 > 关于java的卸载:详细见本博客的：javadel.md。  
 
 ### 第三步：maven的安装
@@ -40,26 +42,45 @@ yum install -y git即可，测试git -v
 安装过程：遵循官网步骤即可：https://gitlab.cn/install/
 
 **端口配置：**
-配置端口：ect/gitlab/rb配置文件中nignx['listen_port']、ssh_port、以及路径EXTERNAL_URL尾部增加。
-配置端口注意：https需要配置复杂的SSL证书，如果是域名模式，则本地需要system32/etc/host做映射。IP的话直接以及路径EXTERNAL_URL尾部增加填写http://ip即可。
-两个命令：gitlab-ctl reconfigure和gitlab-ctl restart
+配置端口：ect/gitlab/rb配置文件中nignx['listen_port']、ssh_port、以及路径EXTERNAL_URL尾部增加。  
+配置端口注意：https需要配置复杂的SSL证书，如果是域名模式，则本地需要system32/etc/host做映射。IP的话直接以及路径EXTERNAL_URL尾部增加填写http://ip即可。  
+两个命令：gitlab-ctl reconfigure和gitlab-ctl restart  
 
 **用户验证：**
 SSH生成:ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
-SSH位置:c:/USER/.ssh,cat ~/.ssh/id_rsa.pub
+SSH位置:c:/user/.ssh/或 ~/.ssh/id_rsa.pub（linux）
 git config --global user.name "username" //（名字）
 git config --global user.email "username@email.com" //(注册账号时用的邮箱) 
+git config --list //查看配置是否存在和内容。  
 
 **常见报错：**
-1、平台网页无法打开:注意防火墙可能会导致gitlab网页无法访问。可以关闭防火墙再试。
-2、gitlab中502错误、500错误、获取文件夹错误：执行reconfigure和restart一般可以修复，和内存也有一定关系。
+1、平台网页无法打开:注意防火墙可能会导致gitlab网页无法访问。可以关闭防火墙再试。  
+2、gitlab中502错误、500错误、获取文件夹错误：执行reconfigure和restart一般可以修复，和内存也有一定关系。  
 3、gitlab ! [remote rejected] master -> master (pre-receive hook declined) error: failed to push some refs to ' :
-用户没有push权限或者分支被保护
+用户没有push权限或者分支被保护。  
 
 ### 第六步：jenkins的安装
 官网：https://www.jenkins.io/zh/  
 下载war包，进入java -jar war即可启动jenkins。启动失败请尝试--httpPort=7777修改端口再试。  
 常用插件：git-paren（参数用）maven inter（maven项目）ssh-publier(将包发送至另一个SSH用)  
+通常，新建一个maven任务，设置git仓库地址，maven位置，勾选构建成功运行，即可开始一个任务。  
+建议，为了增加maven构建速度，建议设置aliyun的镜像源，
+
+### 附件：设置maven的镜像源
+打开 Maven 的 settings.xml 文件：在 Maven 安装目录下的 conf 文件夹中，找到 settings.xml 文件，并打开它。  
+添加镜像配置：在 settings.xml 文件中，找到 <mirrors> 元素，并添加以下配置后保存退出即可：  
+````
+<mirrors>
+    <mirror>
+        <id>aliyun</id>
+        <mirrorOf>*</mirrorOf>
+        <name>Aliyun Mirror</name>
+        <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+</mirrors>
+````
+
+
 
 
 
