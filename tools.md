@@ -5,6 +5,7 @@
 |-------------------|--------------|---------------------------------------------------|----------------|
 | **EyeGreen**      | 小智护眼宝        | https://huyanbao.cqttech.com                      | 建议设置每1小时休息15分钟 |
 | SSH               | electerm     | https://electerm.html5beta.com                    | 支持SFTP等        |
+| SSH               | xshell     | [ClickHerer](https://www.xshell.com/zh/xshell-download/)                    | 支持SFTP等        |
 | FTP               | 8uftp        | http://www.8u.cn                                  | 支持绿色版          |
 | wamp              | PhpStudy     | https://www.xp.cn                                 | 无              |
 | Baota             | 宝塔运维         | https://bt.cn                                     | 无              |
