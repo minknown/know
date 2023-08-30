@@ -14,6 +14,7 @@
 | **GUI-Redis**     | RedisInsight | [ClickHere](https://redis.io/docs/stack/insight/) | 可视化管理工具        |
 | GUI-Mysql         | Navicat      | [ClickHere](https://navicat.com.cn/products)      | 可视化管理工具        |
 | GUI-Elasticsearch | kibana       | https://www.elastic.co/cn/kibana                  | 可视化管理工具        |
+| **系统下载** | itellyou       | [https://www.elastic.co/cn/kibana](https://next.itellyou.cn/)  | 系统包下载        |
 
 ## 其他-教程中心
 | 知识            | 教程入口                                        |
