@@ -4,9 +4,8 @@
 ## 近期要学习的点
 * kaka消息队列
 * Springclound
-* CICD As jenkins
 * docker
-* linux、vm、git(lab)、jobb/tomcat
+* jobb\tomcat\云部署等查漏补缺
 * 英语、学历、**互补性原理**问题
   
 ## 索引指南
