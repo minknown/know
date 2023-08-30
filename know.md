@@ -33,7 +33,7 @@
 * 注意：mysql-connector-java:jar:unknown was not错误：在pom中为mysql驱动指定版本
 
 ## 辅助知识-Linux运维
-* 服务器选型centos7.8(7.6-7.9)，可使用bt辅助。
+* 服务器选型centos7.8(7.6-7.9)，可使用bt辅助。安装时下载DVD版本(boot版本仅含启动功能),安装注意目标磁盘、安装源件、网络启用三个问题。  
 * 能够了解目录接口，了解文件操作、基本地查看内存和用户、网络设置。
 * com笔记版:tree,tail,cat\vim\启动服务，压缩tar/zip/rar。chmod提权/sh执行shell。shutdown -h now关机reboot重启。
 * shell笔记版:{$x}变量，&>输出,[]运算，路径PATH/USER/time/$?，function,for,read p,echo颜色。ifthen(-eq -z -f)
@@ -42,7 +42,9 @@
 * 部署：apache\nginx\tomcat,对应目录htdoc\html\.webapps,目录提供错误访客日志,conf,bin.
 * 安装前：sudo yum update,set firewalld. wget+JCC
 * 安装中：http://nginx.org/en/linux_packages.html,yum install httpd,gar-tomcat(down:bin)
-* 注意：tomcat安装方式为tar解压-->usr/local。且需要先安装JAVA+环境配置。
+* 注意：tomcat安装方式为tar解压-->usr/local。且需要先安装JAVA+环境配置。  
+* vim的搜索和注释：:r !命令：在vim编辑时执行命令再回来,连续行注释:n1,n2s/^#//g,/string
+* vim替换：:ab old new或:%s/old/new/g  
 
 ## 辅助知识-简单压测
 * 使用阿里云压测，了解TPS\QPS\RT\SL（成功率稳定性）（压测成本10000/50元，比Jmeter有效且可以模拟多地多IP）
