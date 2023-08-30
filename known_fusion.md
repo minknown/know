@@ -17,10 +17,11 @@ yum clean all && yum makecache
 
 ### 第二步：JAVA环境建设
 Jenkins需要jdk\git\maven才能基本型地运行。  
-所以可通过下边安装JAVA（尾部加-devel才代表JDK）
+所以可通过下边安装JAVA  
 ````
-java8:sudo yum install -y java-1.8.0-openjdk*-devel
-java18:sudo yum install java-17-openjdk*-devel
+java8:sudo yum install -y java-1.8.0-openjdk*-devel  
+java17:sudo yum install java-17-openjdk*-devel  
+//注意：尾部加-devel才代表JDK，紧跟openjdk，*一般可以去除。  
 ````
 > 通过java -version验证安装。  
 > 通过find / -name 'java'、which java、whereis java查找jdk安装的位置。  
