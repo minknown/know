@@ -4,7 +4,7 @@
 1. 组网：桥接模式(常用)：和物理机组为局域网 ; NAT模式：和外部本机电脑当作路由器
 2. 组网可能可能还会遇到IP变化和网段问题，在VMware中编辑菜单-虚拟网络编辑器，选择网络模式，进行下边子网IP和子网掩码、DHCP设置。  
 3. 通过ip addr查看ip.IP地址可能每次启动会重新跳动，可通过百度自行设置固定（在linux中vim配置进行设置IP固定）。
-4. 建议虚拟机配置，最低8G内存+30G硬盘，外部非虚拟机的话16G+256G硬盘
+4. 建议虚拟机配置，最低8G内存+30G硬盘，外部非虚拟机的话16G+256G硬盘。**注意：安装前最好确认硬盘空间，后期改很麻烦，最好预留大点**  
 5. 安装好后检查防火墙是否关闭，通过yum install wget测试yum，如有Appstem\repotity的问题请配置yum源，尤其在centos8下yum源暂停服务的情况下:  
 ````
 cd /etc/yum.repos.d
@@ -84,6 +84,8 @@ git config --list //查看配置是否存在和内容。
     </mirror>
 </mirrors>
 ````
+报错：java.lang.IllegalStateException: Cannot load configuration class: com.example.demo.DemoApplication  
+解决：请检查您的程序，在IDEA上启动程序运行，这是spring导致的java版本兼容性问题，我们推荐使用springboot.而非jenkins模板。
 
 
 
