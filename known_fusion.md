@@ -43,20 +43,24 @@ yum install -y git即可，测试git -v
 
 **端口配置：**
 配置端口：ect/gitlab/rb配置文件中nignx['listen_port']、ssh_port、以及路径EXTERNAL_URL尾部增加。  
-配置端口注意：https需要配置复杂的SSL证书，如果是域名模式，则本地需要system32/etc/host做映射。IP的话直接以及路径EXTERNAL_URL尾部增加填写http://ip即可。  
-两个命令：gitlab-ctl reconfigure和gitlab-ctl restart  
+配置端口注意：  
+1. https需要配置复杂的SSL证书，如果是域名模式，则本地需要system32/etc/host做映射。
+2. IP的话直接以及路径EXTERNAL_URL尾部增加填写http://ip即可。  
+**两个命令：gitlab-ctl reconfigure和gitlab-ctl restart**
 
 **用户验证：**
+````
 SSH生成:ssh-keygen -t rsa -C "xxxxx@xxxxx.com"  
 SSH位置:c:/user/.ssh/或 ~/.ssh/id_rsa.pub（linux）  
 git config --global user.name "username" //（名字）  
 git config --global user.email "username@email.com" //(注册账号时用的邮箱)   
 git config --list //查看配置是否存在和内容。    
+````
 
 **常见报错：** 
-1、平台网页无法打开:注意防火墙可能会导致gitlab网页无法访问。可以关闭防火墙再试。    
-2、gitlab中502错误、500错误、获取文件夹错误：执行reconfigure和restart一般可以修复，和内存也有一定关系。    
-3、gitlab ! [remote rejected] master -> master (pre-receive hook declined) error: failed to push some refs to ' :
+1. 平台网页无法打开:注意防火墙可能会导致gitlab网页无法访问。可以关闭防火墙再试。    
+2. gitlab中502错误、500错误、获取文件夹错误：执行reconfigure和restart一般可以修复，和内存也有一定关系。    
+3. gitlab ! [remote rejected] master -> master (pre-receive hook declined) error: failed to push some refs to ' :
 用户没有push权限或者分支被保护。   
 
 ### 第六步：jenkins的安装
