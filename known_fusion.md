@@ -46,7 +46,7 @@ yum install -y git即可，测试git -v
 配置端口注意：  
 1. https需要配置复杂的SSL证书，如果是域名模式，则本地需要system32/etc/host做映射。
 2. IP的话直接以及路径EXTERNAL_URL尾部增加填写http://ip即可。  
-**两个命令：gitlab-ctl reconfigure和gitlab-ctl restart**
+**两个命令：gitlab-ctl reconfigure和gitlab-ctl restart，以及status**
 
 **用户验证：**
 ````
