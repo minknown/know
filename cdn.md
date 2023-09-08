@@ -14,7 +14,9 @@ HOSTRY
 ````
 CF配置踩坑指南：
 DNS转移+CNAME解析即可生效。
-坑比较少
+坑比较少  
+绑定账户：myjasan-email  
+
 ````
 
 ````
