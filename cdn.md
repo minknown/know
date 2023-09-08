@@ -18,14 +18,15 @@ DNS转移+CNAME解析即可生效。
 ````
 
 ````
-Bunny配置踩坑指南：
-将域名DNS转义至Bunny，建议只做wwww模式。
-其中增加解析记录非www的，通过cname，转入www模式
-其中增加解析记录为wwww，直接解析至目标服务器IP。
-清空所有CDN列表，在DNS解析记录中直接开启所有解析条目的CDN。会自动生成所有CDN条目
-如遇到HTTPS异常，检查所有CDN条目的HTTPS模式即可（无需做CNAME了即可通过HTTPS验证）。
+Bunny配置踩坑指南：  
+将域名DNS转义至Bunny，建议只做跟模式。  
+其中增加解析记录www的，通过cname，转入非www模式  
+其中增加解析记录为@，直接解析至目标服务器IP。  
+清空所有CDN列表，在DNS解析记录中直接开启所有解析条目的CDN。会自动生成所有CDN条目。  
+如遇到HTTPS异常，检查所有CDN条目的HTTPS模式（特别针对域名的第二行那条）即可（无需做CNAME了即可通过HTTPS验证，如果CNAME提示，等一会即可）。  
+html等后缀没有HIT等问题，设置智能缓存导致的，智能缓存会缓存官方指定的后缀没有HTML，可以关闭或者独立的边缘规则即可。  
 另外还支持仅URL-CDN和WP模式
-绑定账户：myjasan-email
+绑定账户：myjasan-email 
 ````
 
 ````
