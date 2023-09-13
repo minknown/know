@@ -23,8 +23,9 @@ https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494
 4. VPM:PureVpn(推荐)\快连(有限流)\expressvpn(需要配置),或者使用linux-pptp自己搭建:https://www.youtube.com/watch?v=PdAYlMIyICk
 5. 内网穿透：向日葵花生壳、NATAPP或者路由器
 6. VPM：https://m-n.cc/NzAIGFv
-7. MAVEN:https://mvnrepository.com   
-8. 镜像站点：暂无  
-9. **教程中心见bibill收藏夹**  
+7. MAVEN:https://mvnrepository.com
+8. 视图传值技术：Thymeleaf,引入包后不加body注解的return "index"会自动到resources/templates寻找index.html;
+9. 镜像站点：暂无
+10. **教程中心见bibill收藏夹**  
 
 
