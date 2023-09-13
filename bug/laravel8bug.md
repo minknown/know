@@ -14,3 +14,7 @@ RewriteRule ^(.*)$ index.php/?$1 [QSA,PT,L]
 ## 传统路由写法不行
 app\Providers\RouteServiceProvider.php，搜寻nameprace取消注释即可。
 
+## 学习要点
+（1）.掌握：视图、控制器、路由的位置和写法。  
+（2）.知道控制器返回、学会用composer即可  
+
