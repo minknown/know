@@ -89,12 +89,12 @@ eureka.client.service-url.defaultZone=http://127.0.0.01:10086/eureka/
 <artifactId>spring-cloud-starter-openfeign</artifactId>
 </dependency>
 ````
-创建一个接口，并自动状态后调用接口内对应的方法即可，注意此处和被调用的远程接口一致，无论是参数还是请求方式还是返回。
+创建一个接口，并自动状态后调用接口内对应的方法即可，注意此处和被调用的远程接口一致，无论是参数还是请求方式还是返回。  
 ````java
-@FeignClient("user")
+@FeignClient("user")//user必须为远程服务名称
 public interface UserClient {
-    @GetMapping("/user")
-    String getuser();
+    @GetMapping("/user")//必须和远程服务暴漏的接口路由一致
+    String getuser();//自定义方法,但返回值必须遵守源远程接口的返回内容值类型
 }
 ````
 
