@@ -25,7 +25,8 @@ https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494
 6. VPM：https://m-n.cc/NzAIGFv
 7. MAVEN:https://mvnrepository.com
 8. 视图传值技术：Thymeleaf,引入包后不加body注解的return "index"会自动到resources/templates寻找index.html;
-9. 镜像站点：暂无
-10. **教程中心见bibill收藏夹**  
+9. JWT和JAVA验证码技术（Hutools工具类）  
+10. 镜像站点：暂无
+11. **教程中心见bibill收藏夹**  
 
 
