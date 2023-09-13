@@ -38,7 +38,7 @@ https://cn.aliyun.com/
 > **Feign远程调用出现[dispatcherServlet]错误时请考虑是否static导致的。static定的方法不会被AOP增强。**
 
 三大微服务:Dubbo、SpringCloud(建议学习)、SpringCloudAlibaba
-![](mainjs\cloud-three.jpg)
+![](./mainjs/cloud-three.jpg)
 
 (1)引入springcloud:
 ````java
