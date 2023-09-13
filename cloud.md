@@ -71,7 +71,7 @@ https://cn.aliyun.com/
 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 </dependency>
 ````
-最后配置yml:
+最后配置yml（控制台http://127.0.0.01:10086,10086是自定义端口）:
 ````java
 server.port=10086
 spring.application.name=ser
@@ -102,6 +102,6 @@ public interface UserClient {
 暂无
 
 ### 拓展：
-负载均衡、消息日志编码等问题、跨域、断言过滤器、集群等问题、RestTemplate(传统)\Dubbo调用法
+服务监控、负载均衡、消息日志编码等问题、跨域、断言过滤器、集群等问题、RestTemplate(传统)\Dubbo调用法
 教程来自：
 >【黑马SpringCloud微服务全通关，一套精通springcloud全技术栈Eureka、 Nacos、OpenFeign、网关Gateway、 Spring-哔哩哔哩】 https://b23.tv/s9hbr90
