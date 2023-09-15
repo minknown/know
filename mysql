@@ -3,12 +3,33 @@
 ## mysql安装
 
 ## mysql常用语句
+````mysql
+mysql -uroot -p;//进入MySQL
+quit/exit;//退出MySQL
+mysqladmin -uroot -p原密码 password 新密码;//设置密码
+SHOW VARIABLES//show variables like '%xxx%';//查询安装等配置信息
+SHOW DATABASES/TABLES(like '%**%');查询所有库和某个表
+set aa=bb;//设置仅此次有效
+````
+
+##mysql开启远程
+远程开启方法:https://www.utheme.cn/code/mysql/25929.html  
+Navicat for MySQL:https://navicat.com.cn/products/navicat-for-mysql  
 
 ## mysql配置调优
-innodb_io_capacity：和磁盘IOSP有关，默认200，建议200-1000，SSD可以适当调高，此值太高可能导致缓存不用到，所以并非越高越好，
 
-## mysql技术调优
+innodb_buffer_pool_size：这是一个用于管理索引和数据文件缓存的主内存池。将其大小设置为足够大以容纳所需的索引和表数据，有助于提高读写性能。  
+key_buffer_size：对于MyISAM表，此参数设置缓冲区的大小，用于缓存常用数据块。建议将其调整到尽可能大的值。  
+max_connections：如果设置过低，则可能会引起并发问题，如果设置过高，则可能会浪费系统资源。合理的值应根据服务器硬件和网络连接数量进行调整。  
+query_cache_size：启用查询缓存可以提高查询性能，因为经常执行的查询可以从缓存中直接获取结果。然而，对于具有大量更新、删除或插入操作的数据库，启用查询缓存可能会降低性能。  
+tmp_table_size 和 max_heap_table_size：这两个参数控制缓存中生成的临时表的大小。请确保它们的值足够大，以避免频繁创建和删除临时表。  
+其他:innodb_io_capacity：和磁盘IOSP有关，默认200，建议200-1000，SSD可以适当调高，此值太高可能导致缓存不用到，所以并非越高越好。  
+其他:innodb_thread_concurrency：默认值是0，建议设置为（cpu数+磁盘数）*2。
+> innodb_buffer_pool_size参数设置为在专用数据库机器上物理内存的70-90%，以提高缓存命中率；
+> 配置文件（通常位于/etc/mysql/my.cnf 或者 /etc/my.cnf）,win系统在my.ini
 
+
+## mysql配置指南
 项目业务中读写参半，单节点难以承载压力，项目集群、双主热备值得参考。
 项目业务中写大于读，引入消息中间件、DB分库、项目集群也可以考虑。
 项目业务中读大于写，引入缓存/搜索中间件、动静分离、读写分离是些不错的选择。
@@ -16,8 +37,8 @@ innodb_io_capacity：和磁盘IOSP有关，默认200，建议200-1000，SSD可�
 1、选型和结构
 2、索引和与语句优化
 3、分表分库
-4、缓存技术（内置,innodb,redis）
+4、缓存技术（连接池、MYSQL内置,innodb,redis）
 5、主从读写分离
 6、消息中间件
 7、集群部署
-> innodb_buffer_pool_size参数设置为物理内存的70%-75%，以提高缓存命中率；
+
