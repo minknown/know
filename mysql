@@ -6,7 +6,9 @@ https://m.runoob.com/mysql/mysql-install.html
 
 ## mysql常用语句
 
-> 重点掌握join和UNION
+> 重点掌握join(三种连接)和UNION(和ALL区别).  
+> 子语句嵌套如where id = (select * from school)的本质还是join.  
+
 ````
 mysql -uroot -p;//进入MySQL
 quit/exit;//退出MySQL
@@ -15,11 +17,13 @@ SHOW VARIABLES//show variables like '%xxx%';//查询安装等配置信息
 SHOW DATABASES/TABLES/CREAT TABLES(+name or like '%**%');查询所有库和某个表,大部分可通过select和show+name显示出值。  
 set aa=bb;//设置仅此次有效
 ````
-##数据脱敏和SQL注入安全
-数据脱敏：md5
+
+##SQL脱敏和注入安全
+数据脱敏：md5、SUBSTR(LEGT\RIGHT)、CONCAT、REPEAT、HEX(AES_ENCRYPT(contents,password))
 SQL注入防止：
-> php中使用mysqli_real_escape_string或ORM，
-> java使用#代替$占位符或mybatis+，重点防护like\in\orderby(#占位符使用相对复杂点)
+> php中使用mysqli_real_escape_string或ORM，  
+> java使用#代替$占位符或mybatis+，重点防护like\in\orderby(#占位符使用相对复杂点);  
+> 举例手机号前3后4写法:SELECT CONCAT(SUBSTR(phone, 1, 3), REPEAT('*', 4), SUBSTR(phone, 8)) AS phone FROM users;  
 
 ##mysql开启远程
 远程开启方法:https://www.utheme.cn/code/mysql/25929.html  
