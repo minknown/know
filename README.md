@@ -5,7 +5,7 @@
 * kaka消息队列
 * Springclound
 * docker
-* jobb\tomcat\云部署等查漏补缺
+* jobb\tomcat云部署,mysql&boot事务等查漏补缺
 * 英语、学历、**互补性原理和简易版本**问题
 
 ## 周期复习榜(简单知识点)
