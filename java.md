@@ -1,3 +1,30 @@
+## Java安装，在WINDOWS上
+https://www.oracle.com/sg/java/technologies/downloads/
+https://www.java.com/zh-CN
+
+## Java安装，在Centos上
+````
+java8:sudo yum install -y java-1.8.0-openjdk*-devel  
+java17:sudo yum install java-17-openjdk*-devel  
+//注意：尾部加-devel才代表JDK，紧跟openjdk，*一般可以去除。  
+````
+> 通过java -version验证安装。  
+> 通过which java（推荐方法：在ls -lrt dir进入多层直到找到）、find / -name 'java'、whereis java查找jdk安装的位置。  
+> 通过yum search java | grep java 搜索java的所有软件包。  
+
+## 环境变量  
+JAVA_HOME和JRE_HOME   
+PATH加入上述两个bin即可。  
+````java
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.372.b07-1.el7_9.x86_64
+export JRE_HONE=$JAVA_HOME/jre
+export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+````
+快速生效:sourse /etc/profile,echo $JAVA_HOME
+
+
+## 卸载方法
 由于EPICS工作环境下安装CSS，但CSS不支持开源jdk,所以首先需要卸载open jdk,然后再安装jdk-8u144-linux-x64.tar.gz（CSS只支持8及以上版本）。
 
 一、卸载，需卸载干净，不然会出各种覆盖问题，很麻烦！
