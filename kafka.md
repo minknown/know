@@ -2,6 +2,8 @@
 本文介绍了kafka在linux和java上的实现，以及可视化Web工具的EFAK的安装和运行。  
 kafka官网：https://kafka.apache.org/  
 EFAK官网：https://www.kafka-eagle.org/  
+黑马教程： https://b23.tv/Vb57Jhd  
+kafka的学习扩展：配置名解释、分区概念、集群（zookeeper\hadoop）、重载数据积压消息不丢失等问题  
 
 ## kafka的安装
 内存最低4GB,为重磁盘型应用，否则会由各种错误，  
@@ -9,6 +11,7 @@ EFAK官网：https://www.kafka-eagle.org/
 本案例使用Centos7，另外就是kafka的搭建前系统需要有java8+(jdk，可以不配JAVA_HOME)  
 kafka安装为绿色解压缩安装方式，这里假设它位于root/kafka下，配置的话注意broker.id的唯一性。  
 ````
+sudo yum install -y java-1.8.0-openjdk*-devel
 chmod +x /root/kafka/bin/zookeeper-server-start.sh
 chmod +x /root/kafka/bin/kafka-run-class.sh
 /root/kafka/bin/zookeeper-server-start.sh /root/kafka/config/zookeeper.properties
@@ -42,7 +45,7 @@ xxx.send("tasks","hello");
     }
 ````
 **踩坑**  
-unknownHost异常：kafka的server.properties配置中加入listeners=PLAINTEXT://外网IP:9092，如果保存空则自动使用内网IP。  
+UnknownHostException异常：kafka的server.properties配置中加入listeners=PLAINTEXT://外网IP:9092，如果保存空则自动使用内网IP。  
 准确来讲是加入advertised.listeners。  
 两者的不同：http://t.csdn.cn/00MZg  
 
