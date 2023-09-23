@@ -21,7 +21,7 @@ export JRE_HONE=$JAVA_HOME/jre
 export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 ````
-快速生效:sourse /etc/profile,echo $JAVA_HOME
+快速生效:source /etc/profile,echo $JAVA_HOME
 
 
 ## 卸载方法
