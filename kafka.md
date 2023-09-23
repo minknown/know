@@ -3,6 +3,7 @@
 kafka官网：https://kafka.apache.org/  
 EFAK官网：https://www.kafka-eagle.org/  
 黑马教程： https://b23.tv/Vb57Jhd  
+kafka的应用场景：应用解耦、削峰填谷、活动跟踪和日志收集、流任务处理(发短信)等。  
 kafka的学习扩展：配置名解释、分区概念、集群（zookeeper\hadoop）、重载数据积压消息不丢失等问题  
 
 ## kafka的安装
