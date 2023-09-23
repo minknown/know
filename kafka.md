@@ -45,7 +45,7 @@ xxx.send("tasks","hello");
     }
 ````
 **踩坑**  
-UnknownHostException异常：kafka的server.properties配置中加入listeners=PLAINTEXT://外网IP:9092，如果保存空则自动使用内网IP。  
+UnknownHostException异常：kafka的server.properties配置中加入listeners=PLAINTEXT://外网IP:9092，如果保存空则自动使用内网IP。 如果不行研究etc/hosts  
 准确来讲是加入advertised.listeners。  
 两者的不同：http://t.csdn.cn/00MZg  
 
