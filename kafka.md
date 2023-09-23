@@ -50,6 +50,13 @@ efak安装为绿色解压缩安装方式，这里假设它位于root/kafkaweb下
 efak.zk.cluster.alias=cluster1
 cluster1.zk.list=localhost:2181 //配置集群和zk的地址和端口
 kafka mysql jdbc driver address //配置数据库，可使用宝塔快速安装mysql。
+
+//需要配环境变量:vim /etc/profile（生效source /etc/profile）
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.el7_9.x86_64
+export JRE_HONE=$JAVA_HOME/jre
+export CLASSPATH=$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export KE_HOME=/root/kafkaweb
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$KE_HOME/bin:$PATH
 ````
 **踩坑**  
 注意关闭防火墙：systemctl stop firewalld;  
