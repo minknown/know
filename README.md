@@ -11,6 +11,7 @@
 * webfilter和拦截器（Javaweb课程）
 * 分页（Javaweb课程）
 * 验证码，JWT
+* nginx负载均衡
 
 * 英语、学历、**互补性原理和简易版本**问题
 
