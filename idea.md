@@ -33,4 +33,24 @@ Ctrl + F9：构建/编译类
 ## 项目结构
 MVC\MSC *(M即模型Dao,里面包括mapper和pojo,Utils建议写入Ctrl控制包中，Java视图类写在static、templates下,控制层的只是负责转发，Service层才是对某项服务功能的逻辑业务代码块。)*
 
- 
+## 依赖加载卡住（修改maven镜像即可）
+maven的setting.xml 一般都会说在C:\Users\xxx\.m2\ 下，其实这个目录下没有，而是在idea安装目录下的插件目录下的maven目录下，如：  
+C:\Program Files (x86)\JetBrains\IntelliJ IDEA 14.1.1\plugins\maven\lib\maven3\conf  
+但是貌似如果.m2目录有这个文件，配置同样有用。  
+最快速的简洁的方法是，右键pom.xml文件，maven-creat setting.xml即可打开或创建该文件。  
+阿里云镜像的setting.xml:  
+````xml
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+<mirrors>
+    <mirror>
+        <id>aliyunmaven</id>
+        <mirrorOf>*</mirrorOf>
+        <name>阿里云公共仓库</name>
+        <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+</mirrors>
+</settings>
+````
