@@ -1,5 +1,5 @@
 ## Java安装，在WINDOWS上
-https://www.oracle.com/sg/java/technologies/downloads/
+https://www.oracle.com/sg/java/technologies/downloads/  
 https://www.java.com/zh-CN
 
 ## Java安装，在Centos上
