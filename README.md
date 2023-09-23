@@ -4,15 +4,16 @@
 ## 近期要学习的点
 * kaka消息队列
 * Springclound
-* docker
+* docker\zookeep\hadoop
 * jobb部署
+* mysql的集群部署和索引问题
 * mysql&boot事务等查漏补缺
 * sentinel(spring cloud)
 * webfilter和拦截器（Javaweb课程）
 * 分页（Javaweb课程）
 * 验证码，JWT
-* websocket(选学)
-* nginx负载均衡(选学)
+* websocket(*)
+* nginx负载均衡(*)
 
 * 英语、学历、**互补性原理和简易版本**问题
 
