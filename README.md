@@ -5,7 +5,13 @@
 * kaka消息队列
 * Springclound
 * docker
-* jobb\tomcat云部署,mysql&boot事务等查漏补缺
+* jobb部署
+* mysql&boot事务等查漏补缺
+* sentinel(spring cloud)
+* webfilter和拦截器（Javaweb课程）
+* 分页（Javaweb课程）
+* 验证码，JWT
+
 * 英语、学历、**互补性原理和简易版本**问题
 
 ## 周期复习榜(简单知识点)
