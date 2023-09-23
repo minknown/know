@@ -19,7 +19,7 @@
 2. 数据库例程：普通模式下和Springboot模式下。
   
 ## 索引指南
-1. 第三方技术支持：LogorBug->Google->StackOverflow->QQ->CSDN->联络员,雇佣转发,小问题直接写方法,大问题直接模拟出测试公司数据库即可。
+1. 第三方技术支持：LogOrBug->Google->StackOverflow->QQ->CSDN->联络员,雇佣转发,小问题直接写方法,中问题起高价格研究项目，大问题直接模拟出测试公司数据库即可。
 2. 网盘备份：Googdriver->Dropbox->ftpbox.org    
   *(前者最大15GB，后两者均为双向自动同步)*
 3. 远程协助工具：todesk、向日葵，电话使用微信或QQ等
