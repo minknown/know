@@ -24,13 +24,16 @@ spring.kafka.bootstrap-servers=64.176.54.197:9092
 <artifactId>spring-kafka</artifactId>
 </dependency>
 ````
+
 对于生产者
 ````java
 @Autowired
 private KafkaTemplate<String,String> xxx;
 xxx.send("tasks","hello");
 ````
+
 对于消费者
+````java
 @KafkaListener(topics = "tasks")
     public void  onMsf(ConsumerRecord<String,String> record){
         System.out.println("收到："+record.value());
@@ -48,9 +51,9 @@ cluster1.zk.list=localhost:2181 //配置集群和zk的地址和端口
 kafka mysql jdbc driver address //配置数据库，可使用宝塔快速安装mysql。
 ````
 **踩坑**
-注意关闭防火墙：systemctl stop firewalld;
-登录不上：ERROR - Telnet has error, msg is java.lang.IllegalArgumentException: port out of range:-1
-原因:和JAVA-JMX有关系，启动kafka时命令改为：JMX_PORT=6666 /root/kafka/bin/kafka-server-start.sh /root/kafka/config/server.properties或修改kafka-run-class.sh中JAVA-JMX的配置。
-可通过日志logs/error.log查看具体错误原因。也可到数据库查看是否存在ke库检查数据库是否存在问题。
+注意关闭防火墙：systemctl stop firewalld;  
+登录不上：ERROR - Telnet has error, msg is java.lang.IllegalArgumentException: port out of range:-1  
+原因:和JAVA-JMX有关系，启动kafka时命令改为：JMX_PORT=6666 /root/kafka/bin/kafka-server-start.sh /root/kafka/config/server.properties或修改kafka-run-class.sh中JAVA-JMX的配置。  
+可通过日志logs/error.log查看具体错误原因。也可到数据库查看是否存在ke库检查数据库是否存在问题。  
 
 
