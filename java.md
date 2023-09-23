@@ -13,6 +13,7 @@ java17:sudo yum install java-17-openjdk*-devel
 > 通过yum search java | grep java 搜索java的所有软件包。  
 
 ## 环境变量  
+https://www.cnblogs.com/leolzi/p/13617367.html  
 JAVA_HOME和JRE_HOME   
 PATH加入上述两个bin即可。  
 ````java
