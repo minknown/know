@@ -39,9 +39,10 @@ xxx.send("tasks","hello");
         System.out.println("收到："+record.value());
     }
 ````
-**踩坑**
-unknownHost异常：kafka的server.properties配置中加入listeners=PLAINTEXT://外网IP:9092，如果保存空则自动使用内网IP。准确来讲是加入advertised.listeners。
-两者的不同：http://t.csdn.cn/00MZg
+**踩坑**  
+unknownHost异常：kafka的server.properties配置中加入listeners=PLAINTEXT://外网IP:9092，如果保存空则自动使用内网IP。  
+准确来讲是加入advertised.listeners。  
+两者的不同：http://t.csdn.cn/00MZg  
 
 ## efak的实现
 efak安装为绿色解压缩安装方式，这里假设它位于root/kafkaweb下，启动命令为bin/sk.sh start，配置文件为conf下system-config.properties，注意：
@@ -50,7 +51,7 @@ efak.zk.cluster.alias=cluster1
 cluster1.zk.list=localhost:2181 //配置集群和zk的地址和端口
 kafka mysql jdbc driver address //配置数据库，可使用宝塔快速安装mysql。
 ````
-**踩坑**
+**踩坑**  
 注意关闭防火墙：systemctl stop firewalld;  
 登录不上：ERROR - Telnet has error, msg is java.lang.IllegalArgumentException: port out of range:-1  
 原因:和JAVA-JMX有关系，启动kafka时命令改为：JMX_PORT=6666 /root/kafka/bin/kafka-server-start.sh /root/kafka/config/server.properties或修改kafka-run-class.sh中JAVA-JMX的配置。  
