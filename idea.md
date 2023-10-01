@@ -26,7 +26,7 @@ mybatis-plus.global-config.banner=false
  ````
 
 ## IDEA快捷键
-Shift+Ctrl+/：注释，/**快速文档方法注释  
+Shift+Ctrl+/：注释，/**快速文档方法注释(Javadoc生成加命令行参数-encoding utf-8解决中文乱码)    
 Ctrl + F9：构建/编译类  
 其他没什么比较特别的，注意键位可以在IDEA设置中自定义。  
 
