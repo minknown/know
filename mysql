@@ -4,6 +4,10 @@
 https://m.runoob.com/mysql/mysql-install.html
 （要求自己操作多次，熟悉程度，备份使用运维平台工具或者SH脚本）
 
+## mysql编码问题
+推荐utf8mb4_unicode_ci，utf8mb4比utf8支持生僻字，而Latin1仅支持英法等西方国家的语言而不支持中文日文等。  
+字段储存二进制：BLOB和LONGBLOB  
+
 ## mysql常用语句
 
 > 重点掌握join(三种连接)和UNION(和ALL区别).  
