@@ -33,6 +33,7 @@
 10. SOA:https://www.bilibili.com/video/BV11A411H775 (第五节)  
 11. **IOCID、文件及OSS上传、AOP切面编程（第180集）（提到了ID中多个重复、命名、解耦注入以及四大注解等问题）**：   
 https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494311c71570646  
-11. **教程中心见bibill收藏夹**  
+11. **教程中心见bibill收藏夹，更多专业板块支持请访问known.md**  
+12. Springboot中控制器使用HttpServletRequest request和HttpSession session接收请求头和操作session。  
 
 
