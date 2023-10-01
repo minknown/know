@@ -2,20 +2,14 @@
 知识中心和近期学习计划，以及BUG集合，索引指南、其他工具类和教程。
 
 ## 近期要学习的点
-* kaka消息队列
-* Springclound
-* docker\zookeep\hadoop
-* jobb部署
-* mysql的集群部署和索引问题
+* kaka消息队列\Springclound\sentinel(增强型学习)
 * mysql&boot事务等查漏补缺
-* sentinel(spring cloud)
-* webfilter和拦截器（Javaweb课程）
+* docker\zookeep\hadoop
+* mysql的集群部署和索引问题
+* webfilter和拦截器（Javaweb课程）或SpringSecurity
 * 分页（Javaweb课程）
-* 验证码，JWT
-* websocket(*)
 * nginx负载均衡(*)
 * 数据库例程mybaits
-* 工作流、文档能力
 * 英语、架构师学历、**互补性原理和简易版本**问题
 
 ## 周期复习榜(简单知识点)
@@ -34,6 +28,7 @@
 11. **IOCID、文件及OSS上传、AOP切面编程（第180集）（提到了ID中多个重复、命名、解耦注入以及四大注解等问题）**：   
 https://www.bilibili.com/video/BV1m84y1w7Tb?p=147&vd_source=f29aa5fc99e67a889494311c71570646  
 11. **教程中心见bibill收藏夹，更多专业板块支持请访问known.md**  
-12. Springboot中控制器使用HttpServletRequest request和HttpSession session接收请求头和操作session,通过MultipartFile f，接收文件(注意配置最大小和前端表单加入enctype)。  
+12. Springboot中控制器使用HttpServletRequest request和HttpSession session接收请求头和操作session,通过MultipartFile f，接收文件(注意配置最大小和前端表单加入enctype)。
+13. 验证码，JWT，websocket我们使用了hutools的方案。
 
 
