@@ -176,6 +176,9 @@ const testModule = uni.requireNativePlugin('Scan')
 选择导入的项目UniPlugin-Hello-AS，点击IDE的File->Project Structure->SDK Location,点击Gradle Settings。配置JDK为1.8即可。UNI官方文档认为该示例包兼容并推荐1.8。**搞完记得重启IDE**。如下图所示：
 ![图片4](mainjs/uniaar-p5.png)
 
+## 附文：雷电安卓模拟器调试方法
+开启手机的开发者模式(版本连按5下)后启动USB调试，CMD运行雷电目录下：adb.exe connect 127.0.0.1:5555即可。
+
 ## 附文：Gradle节点配置（非必要）
 在gradle目录下找到wrapper目录，找到gradle-wrapper.properties文件配置：
 ````
