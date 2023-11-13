@@ -6,7 +6,7 @@
 教程学习参考某个CSDN博主，非常感谢：[深圳程序员打工崽:uniapp插件开发](https://blog.csdn.net/weixin_39246975/article/details/129078281)     
 
 **概念前言**：
-(我们可能会用AS表示AndroidStudio)
+下文我们可能会用AS表示AndroidStudio，我们还假设了一些内容：
 1. uniapp的APP包名为com.mayizt。
 2. AS新建的模块包名为com.mayizt.uniplugin_scan。
 3. 模块名称uniplugin_scan(建议和模块包名有后缀一致性)。
@@ -30,6 +30,8 @@
 3. 将左侧切换至Android library（moudle），填上你的模块包名package-name后点点击Finish。**记住不能跟uniapp打包时候的包名相同，这是个坑uniapp不兼容）**。
 4. 检查app目录下libs目录下是否有uniapp-release.aar（v8）,如果没有的话需要进入SDK目录(示例SDK压缩包有这个目录)copy一份过来。
 ![图片1](mainjs/uniaar-p1.png)
+
+>如果导入包后IDE右下角Gradle和索引加载进度条跑完，SycnNow后产生错误，尤其是org.codehaus.groovg.control和Unsupported java错误，请参考本文结尾的附件，关于[JAVA版本适配问题]去解决。这个问题很容易遇到。
 
 ## 第四步：添加依赖和代码
 给新建的module（uniplugin_scan是我自己新建模块）添加依赖:找到该木块目录下的build.gradle文件，如没有请新建该文件即可。
@@ -90,7 +92,7 @@ import io.dcloud.feature.uniapp.common.UniModule;
 //这是一个求和并返回的方法函数。
 //一定要继承UniModule和使用UniJSMethod注解，才能使用js调用
 // uiThread=true表示是否进入uni界面线程执行，=false表示单开线程，根据代码负荷决定即可。
-public class ScanCode extends UniModule {
+public class Scan extends UniModule {
     @UniJSMethod(uiThread = true)
     public void  add (JSONObject json, UniJSCallback callback) {
         final int a = json.getInteger("a");
@@ -118,15 +120,12 @@ public class ScanCode extends UniModule {
 ![图片3](mainjs/uniaar-p3.png)
 
 ## 第七步：正式打包
-将模块打包成插件aar文件，点击右侧面板的Gradle,找到你的模块名,other->assmbleRelese。
+1. 将模块打包成插件aar文件，点击右侧面板的Gradle,找到你的模块名,other->assmbleRelese。
 >如果不存在assmbleRelese，可进入Seting,找到Experimental,去启动build Gradle task list during Gradle sync再重启AS即可。
 
-打包完成，会在模块下有一个bulid->outputs，有个aar文件复制到电脑桌面上一个android的空目录文件夹，同时桌面上新建空白的package.json文件。
-新建一个以插件名Scan为目录名的文件夹，将上述android文件夹和package.json文件放置进入。
-它的目录结构是如图所示的，到这一步这个Scan的文件夹就是你的插件包了。
-![图片4](mainjs/uniaar-p4.png)
-
-package.json的内容如下：
+2. 打包完成，会在模块下有一个bulid->outputs，有个aar文件复制到电脑桌面上一个android的空目录文件夹，同时桌面上新建空白的package.json文件。
+3. 新建一个以插件名Scan为目录名的文件夹，将上述android文件夹和package.json文件放置进入。
+4. package.json的内容如下：
 >根节点的name必须和id相同，也必须和plugins节点的name相同,代表插件名字。plugins节点class必须是模块包名+类名。
 ````json
 {
@@ -148,9 +147,10 @@ package.json的内容如下：
 	}
 }
 ````
+它的目录结构是如图所示的，到这一步这个Scan的文件夹就是你的插件包了。
+![图片4](mainjs/uniaar-p4.png)
 
-
-## 引用
+## 第八步：引用
 1. 在uniapp工程目录下新建nativeplugins文件夹，将上述插件文件夹复制到该目录。找到manifest.json的插件面板，添加本地插件选中您的插件即可。
 
 2. 打包基座（发行->原生APP云打包），选择证书并选择基座。确认打包基座即可。
@@ -171,3 +171,21 @@ const testModule = uni.requireNativePlugin('Scan')
 
 
 4. 最后，运行，运行到模拟器或手机，注意选择您刚才打包的基座才行，接下来就能看到效果了。
+
+## 附文：JAVA版本适配问题
+选择导入的项目UniPlugin-Hello-AS，点击IDE的File->Project Structure->SDK Location,点击Gradle Settings。配置JDK为1.8即可。UNI官方文档认为该示例包兼容并推荐1.8。如下图所示
+![图片4](mainjs/uniaar-p5.png)
+
+## 附文：Gradle节点配置（非必要）
+在gradle目录下找到wrapper目录，找到gradle-wrapper.properties文件配置：
+````
+distributionUrl=https\://mirrors.huaweicloud.com/gradle/gradle-6.5-all.zip
+````
+找到整个项目下的build.gradle，在buildscript和allprojects的repositories节点添加以下前置内容：
+````
+maven { url 'https://maven.aliyun.com/repository/jcenter' }
+maven { url 'https://maven.aliyun.com/repository/public' }
+maven { url 'https://maven.aliyun.com/repository/google' }
+maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+maven { url 'https://jitpack.io' }
+````
