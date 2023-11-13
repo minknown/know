@@ -76,7 +76,7 @@ dependencies {
 
 ````
 >如同步产生Could not find method compileOnly() for arguments [directory 'libs']错误，很可能是该文件内容有缺陷或有误导致的。可考虑去除plugins和android字段。    
->如同步产生No signature ofm.android0 is applicable for arg Try Again Open ‘Build’ View Show Log in Explorer等其他错误，请删除 namespace，再在找到androidManifest.xml添加模块包名，再点击 file —> sync project whit Gradle Files 进行同步即可。添加模块包名的内容参考如下：
+>如同步产生No signature ofm.android0 is applicable for arg Try Again Open ‘Build’ View Show Log in Explorer等其他错误，请删除模块下build.gradle文件android节点的namespace，再在找到androidManifest.xml添加模块包名，再点击 file —> sync project whit Gradle Files 进行同步即可。添加模块包名的内容参考如下：
 ````
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mayizt.uniplugin_scan" >
 ````
@@ -173,7 +173,7 @@ const testModule = uni.requireNativePlugin('Scan')
 4. 最后，运行，运行到模拟器或手机，注意选择您刚才打包的基座才行，接下来就能看到效果了。
 
 ## 附文：JAVA版本适配问题
-选择导入的项目UniPlugin-Hello-AS，点击IDE的File->Project Structure->SDK Location,点击Gradle Settings。配置JDK为1.8即可。UNI官方文档认为该示例包兼容并推荐1.8。如下图所示
+选择导入的项目UniPlugin-Hello-AS，点击IDE的File->Project Structure->SDK Location,点击Gradle Settings。配置JDK为1.8即可。UNI官方文档认为该示例包兼容并推荐1.8。**搞完记得重启IDE**。如下图所示：
 ![图片4](mainjs/uniaar-p5.png)
 
 ## 附文：Gradle节点配置（非必要）
