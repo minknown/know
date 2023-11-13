@@ -3,7 +3,7 @@
 当HBuilderX中提供的能力无法满足App功能需求，需要通过使用Andorid/iOS原生开发实现时，可使用App离线SDK开发原生插件来扩展原生能力。
 
 官方教程：[https://nativesupport.dcloud.net.cn/NativePlugin/](https://nativesupport.dcloud.net.cn/NativePlugin/) 
-教程学习参考某个CSDN博主，非常感谢：[深圳程序员打工崽:uniapp插件开发](https://blog.csdn.net/weixin_39246975/article/details/129078281)
+教程学习参考某个CSDN博主，非常感谢：[深圳程序员打工崽:uniapp插件开发](https://blog.csdn.net/weixin_39246975/article/details/129078281) 
 **概念前言**：
 (我们可能会用AS表示AndroidStudio)
 1. uniapp的APP包名为com.mayizt。
@@ -18,7 +18,7 @@
 >文件哈希值校验：d07cefc5e9b3a223ac64ca73096c96e9c45bd0e61aa3563388f111acc718a634 
 
 ## 第二步：下载SDK
-这里指的不是AS的AndroidSDK，而是Uni插件提供的插件开发SDK实例包。从uniapp官网教程下载即可。它是一个大概300MB的压缩包。
+这里指的不是AS的AndroidSDK，而是Uni插件提供的插件开发SDK实例包。从uniapp官网教程下载即可。它是一个大概300MB的压缩包。 
 这里提供已给uniapp官网下载链接，但可能会随着页面改版而失效：
 [点此直入SDK实例包下载](https://nativesupport.dcloud.net.cn/AppDocs/download/android.html#)
 >有关于安卓SDK和JAVA环境，请在AS启动时初始化自行安装即可(这一步也是必须的)。
