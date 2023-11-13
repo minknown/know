@@ -154,7 +154,7 @@ public class Scan extends UniModule {
 1. 在uniapp工程目录下新建nativeplugins文件夹，将上述插件文件夹复制到该目录。找到manifest.json的插件面板，添加本地插件选中您的插件即可。
 
 2. 打包基座（发行->原生APP云打包），选择证书并选择基座。确认打包基座即可。
->如打包基座产生MinSDK版本错误，可到App其他常用设置中修改mixSDK的值为21.
+>如打包基座产生MinSDK版本错误，可到App其他常用设置中修改mixSDK的值为21.或检查模块下build.gradle的android->minSdkVersion
 
 3. 最后是代码调用，使用uniapp自带的requireNativePlugin函数方法引入。
 ````js
