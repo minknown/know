@@ -2,10 +2,11 @@
 
 当HBuilderX中提供的能力无法满足App功能需求，需要通过使用Andorid/iOS原生开发实现时，可使用App离线SDK开发原生插件来扩展原生能力。
   
-<video src='https://github-minknown.oss-cn-beijing.aliyuncs.com/uniapp-aar.mp4'></video>   
+
 
 官方教程：[https://nativesupport.dcloud.net.cn/NativePlugin/](https://nativesupport.dcloud.net.cn/NativePlugin/)     
 教程学习参考某个CSDN博主，非常感谢：[深圳程序员打工崽:uniapp插件开发](https://blog.csdn.net/weixin_39246975/article/details/129078281)     
+本文转为视频教程：[https://github-minknown.oss-cn-beijing.aliyuncs.com/uniapp-aar.mp4](https://github-minknown.oss-cn-beijing.aliyuncs.com/uniapp-aar.mp4)    
 
 **概念前言**：
 下文我们可能会用AS表示AndroidStudio，我们还假设了一些内容：
