@@ -75,14 +75,14 @@ dependencies {
 }
 
 ````
->如同步产生Could not find method compileOnly() for arguments [directory 'libs']错误，很可能是该文件内容有缺陷或有误导致的。可考虑去除plugins和android字段。
+>如同步产生Could not find method compileOnly() for arguments [directory 'libs']错误，很可能是该文件内容有缺陷或有误导致的。可考虑去除plugins和android字段。    
 >如同步产生No signature ofm.android0 is applicable for arg Try Again Open ‘Build’ View Show Log in Explorer等其他错误，请删除 namespace，再在找到androidManifest.xml添加模块包名，再点击 file —> sync project whit Gradle Files 进行同步即可。添加模块包名的内容参考如下：
 ````
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mayizt.uniplugin_scan" >
 ````
 
 ## 第五步：编写模块功能
-在main中新建JAVA类,假设类名为ScanCode
+在main中新建JAVA类,假设类名为Scan：
 ````java
 package com.mayizt.uniplugin_scan;
 import com.alibaba.fastjson.JSONObject;
