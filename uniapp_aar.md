@@ -28,7 +28,7 @@
 2. 将左上角切换至project模式，右键新建模块。
 3. 将左侧切换至Android library（moudle），填上你的模块包名package-name后点点击Finish。**记住不能跟uniapp打包时候的包名相同，这是个坑uniapp不兼容）**。
 4. 检查app目录下libs目录下是否有uniapp-release.aar（v8）,如果没有的话需要进入SDK目录(示例SDK压缩包有这个目录)copy一份过来。
-![图片1](p1.png)
+![图片1](mainjs/uniaar-p1.png)
 
 ## 第四步：添加依赖和代码
 给新建的module（uniplugin_scan是我自己新建模块）添加依赖:找到该木块目录下的build.gradle文件，如没有请新建该文件即可。
@@ -112,9 +112,9 @@ public class ScanCode extends UniModule {
     </application>
 ````
 2. 在build.gradle(app)中添加uniapp-插件，点击sync now
-![图片2](p2.png)
+![图片2](mainjs/uniaar-p2.png)
 3. 在dcloud_uniplugin.json中新增插件，注意：插件命名会在uniapp中引用
-![图片3](p3.png)
+![图片3](mainjs/uniaar-p3.png)
 
 ## 第七步：正式打包
 将模块打包成插件aar文件，点击右侧面板的Gradle,找到你的模块名,other->assmbleRelese。
@@ -123,7 +123,7 @@ public class ScanCode extends UniModule {
 打包完成，会在模块下有一个bulid->outputs，有个aar文件复制到电脑桌面上一个android的空目录文件夹，同时桌面上新建空白的package.json文件。
 新建一个以插件名Scan为目录名的文件夹，将上述android文件夹和package.json文件放置进入。
 它的目录结构是如图所示的，到这一步这个Scan的文件夹就是你的插件包了。
-![图片4](p4.png)
+![图片4](mainjs/uniaar-p4.png)
 
 package.json的内容如下：
 >根节点的name必须和id相同，也必须和plugins节点的name相同,代表插件名字。plugins节点class必须是模块包名+类名。
