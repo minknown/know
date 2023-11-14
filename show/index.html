@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>技能预览面板</title>
+		<style>
+		.customers {
+		  
+		  border-collapse: collapse;
+		  width: 100%;
+		  
+		}
+		
+		.customers td, .customers th {
+		 border-bottom: 1px solid #ddd;
+		  padding: 8px;
+		}
+		
+		.customers tr:nth-child(even){background-color: #f2f2f2;}
+		
+		.customers tr:hover {background-color: #ddd;}
+		
+		.customers th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: left;
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		</style>
+		<style>
+			body,html{
+				width:100%;
+				margin:0;
+				padding:0;
+				border: 0;
+				box-sizing: border-box;
+			}
+			body{
+				padding:0 5px;
+			}
+			h1{
+				font-size:22px;
+				text-align: center;
+				margin-bottom:0px;
+			}
+			h6{
+				text-align: center;
+				margin:5px 0;
+			}
+			
+			.ski table .full td{
+				background-color: #dae1c6;
+				font-weight: bold;
+			}
+			.ski table .fullspeak td{
+				background-color: white;
+				color:green;
+				font-size:12px;
+				
+			}
+			
+			.customers tr td object{
+				width:20px;margin-top:5px;
+				cursor: pointer;
+			}
+			.customers tr {
+			cursor: pointer;
+			}
+			.footer{
+				line-height:26px;
+				padding:50px;
+				color:gray;
+				font-size:11px;
+				text-align: center;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h1>技能预览面板</h1>
+		<h6>
+			<button onclick='oc(1);'>星号评级说明</button>
+			<button onclick='oc(2);'>->我的Github博客</button>
+			<button onclick='oc(3);'>->我的Github博客(镜像)</button>
+		</h6>
+		<!--list one-->
+		<div class='ski'>
+	
+		<table class="customers" id="customers">
+		  <tr>
+		    <th>技能名字</th>
+		    <th>描述</th>
+		    <th>自我评级</th>
+		  </tr>
+
+		</table>
+		</div>
+		
+		<div class='footer'>
+			<a id='more' style='color:green' href='javascript:oc(0)'></a><br>
+			@Copyright 2024 Minknown All rights reserved. 
+				 
+			<div>
+	</body>
+	<script>
+		window.onload=star;
+		var more=GetQueryString("more");
+		if(more=="yes"){
+			 document.getElementById('more').innerHTML="不显示技能具体描述";
+		}else{
+			document.getElementById('more').innerHTML="显示技能具体描述";
+		}
+		var skis=[];var temp=[];
+		var ys = document.getElementById('customers');
+			
+		function sp(id){
+			if(skis[id][3].length>0 && skis[id][3]!="x"){
+				alert(skis[id][3]);
+				}else{
+				alert("此项无详细具体内容。");
+			}
+		
+			
+		}
+		function oc(octype){
+			if(octype==0){
+				if(more=="yes"){
+					location.href='index.html';
+				}else{
+					location.href='index.html?more=yes';
+				}
+			}else if(octype==1){
+				alert("评级中一星代表了解(知道未有实例)，二星代表熟悉(简单运用)，三星代表能掌握(一般运用)，四星代表非常掌握(高级运用)，五星代表精通(极其专业包括底层)。");
+			}else if(octype==2){
+				alert("Github在中国大陆区域可能无法访问。");
+				location.href="https://github.com/minknown"
+			}else{
+				location.href="https://fgithub.com/minknown"
+			}
+			
+		}         
+		function star(){
+			
+			
+			//java
+			temp=["JAVA后端技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["JavaEE","JAVA基础",3,"熟知JAVA变量、数组、集合、序列化、IO文件操作、时间、邮件、Bean等操作，搭配hutools工具包运用，熟悉JWT签名、SESSION以及Web过滤器等Web强化工具以及限流配置"];skis.push(temp);
+			temp=["Mybatis","数据库框架",3,"能运用Mybatis和MybatisPlus"];skis.push(temp);
+			temp=["SpringBoot","轻量级和谐性的JavaEE框架",3,"SpringBoot企业级开发必备"];skis.push(temp);
+			temp=["SpringCloud","微服务框架",2,"可配置网关，接口暴露和调用对方接口等操作"];skis.push(temp);
+			temp=["kafka","消息队列技术",2,"我能够安装配置kafka，并在Java上用代码进行kafka消息的生产和消费"];skis.push(temp);
+			//php
+			temp=["PHP后端技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["php原生语法","php语法",3,"x"];skis.push(temp);
+			temp=["laravel","php-mvc框架",3,"x"];skis.push(temp);
+			temp=["PDO","PHP用于查询数据库的拓展",3,"x"];skis.push(temp);
+			
+			//数据库
+			temp=["SQL技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["mysql","mysql技能以及脱敏、性能调优",4,"Mysql的多表查询、性能调优，分库分表和读写分离，以及脱敏操作等"];skis.push(temp);
+			temp=["redis","内存数据库的运用",2,"能部署redis，能使用PHP和JAVA对redis进行简单的增删查改，能处理缓存击穿和数据永久性的问题"];skis.push(temp);
+			
+			
+			//前端
+			temp=["前端技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["vue","vue框架",2,"使用Vue编写前端页面，但并非专业前端人士，但能写出一般性的前端页面。"];skis.push(temp);
+			temp=["html","html原生",4,"html熟的不能再熟了！"];skis.push(temp);
+			temp=["css","css原生",4,"css熟的不能再熟了！"];skis.push(temp);
+			temp=["JS/JQ/AJAX","js原生",4,"js技巧为一般性。"];skis.push(temp);
+			
+			//前端
+			temp=["APP技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["uniapp","可开发安卓和IOS应用",3,"我可以使用Uniapp独立完成Web、安卓和IOS应用的开发。"];skis.push(temp);
+			//运维
+			temp=["运维技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["Linux安装","服务器CentOS系统安装",4,"完成Win和Centos安装并配网等"];skis.push(temp);
+			temp=["部署应用","可配置Tomcat和Apache和Nginx",4,"x"];skis.push(temp);
+			temp=["Shell脚本","编写简单的Shell脚本和备份和任务等",3,"x"];skis.push(temp);
+			temp=["云产品","服务器上云，AWS和阿里云",4,"EC3、OOS存储和弹性SLB，以及无服务器的函数运算、GoogleScript的运用"];skis.push(temp);	
+			temp=["NGINX负载均衡","使用Nginx提供的多种负载均衡能力",3,"x"];skis.push(temp);	
+			temp=["CI/CD","搭建Gitlab和Jennet",3,"我成功部署过Gitlab和Jennet"];skis.push(temp);	
+					
+			//其他技术
+			temp=["其他技术","f",0,"点击技能可获得详情"];skis.push(temp);
+			temp=["CMS","WordPress和zblog的部署运营",4,"用于快速搭建公司主页、博客、商城和各种独立站的技能"];skis.push(temp);
+			temp=["CDN","擅长各大厂商的CDN部署",4,"我独立配置过CloudFlare,ALiYunCDN,BunnyCDN等CDN并成功运行。"];skis.push(temp);		
+			temp=["易语言E4A","编写EXE桌面程式的中文编程",5,"接触易语言已经有10年时间了,可以说属于精通。"];skis.push(temp);		
+			temp=["第三方API","短信接口、身份校验、验证码识别等云API外部调用能力",4,"序列化以及GET&POST请求等。"];skis.push(temp);
+			temp=["selenuim","爬虫、自动化框架",3,"擅长使用selenuim三大部件进行自动化、爬取数据和网页自动填写按键等。"];skis.push(temp);				temp=["Git","Git团队协同工具",4,"能使用Git工具，但不会SVN工具。"];skis.push(temp);				
+			show();		
+		}
+		function show(){
+			
+			for(var i=0;i<skis.length;i++){
+				if(skis[i].length==4){
+					var name=skis[i][0];
+					var desc=skis[i][1];
+					var rate=skis[i][2];
+					var speak=skis[i][3];
+					if(speak.length<=0 || speak=="x"){
+						speak="暂无具体描述";
+					}
+					var ratecode="";
+					if(desc=="f"){
+						if(skis[i][3].length>0){
+							var ad="<span style='float:right;color:red;font-size:13px;margin-top:2px'>("+skis[i][3]+")</span>";
+						}else{
+							var ad="";
+						}
+						var nr="<tr class='full'><td colspan=3>"+name+":"+ad+"</td></tr>";
+					}else{
+						//get rate star
+						for(var x=0;x<5;x++){
+							if(x<rate){
+								var pn="ss";
+							}else{
+								var pn="s";
+							}
+							ratecode=ratecode+'<object data="'+pn+'.svg" type="image/svg+xml"></object>';
+						}
+						
+						var nr="<tr onclick='sp("+i+")'><td>"+name+"</td><td style='font-size:11px'>"+desc+"</td><td>"+ratecode+"</td></tr>";
+						if(more=="yes"){
+							nr=nr+"<tr class='fullspeak'><td colspan=3>"+speak+"</td></tr>"
+						}
+					}
+					ys.innerHTML=ys.innerHTML+nr;
+				}
+				
+			}
+
+		}
+	
+		
+		function GetQueryString(name)
+			{
+			     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			     var r = window.location.search.substr(1).match(reg);
+			     if(r!=null)return  unescape(r[2]); return null;
+			}
+		
+	</script>
+</html>
