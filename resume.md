@@ -1,3 +1,5 @@
+面试可能会问题：自我介绍、离职原因、优缺点、为什么选择我们公司、薪资要求、还面试了哪些其他公司  
+https://www.zhihu.com/question/66397748  
 非培训班出身，实打实IT爱好者。我的技能如下：  
 1、熟练 php 语言，熟悉Laravel 框架，了解swoole框架。  
 2、熟练 java 语言，熟悉 SpringBoot 和Cloud微服务框架，熟悉mybatis框架。  
