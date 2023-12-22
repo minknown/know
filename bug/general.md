@@ -14,6 +14,7 @@
 >SpringBoot V3.0.2 >=JDK 17;  
 >SpringBoot V2.7.8/2.4.5 >=JDK 8;  
 *另外一点:不同版本的IDEA所支持的JDK版本也不一样，在2020版本的IDEA当中是不支持JDK17的。*
+*如果你没有使用Springboot,可以在设置中-构建-JAVA-Compier改为8版本即可解决*  
 
 ````
 数据库查询不出来的错误
