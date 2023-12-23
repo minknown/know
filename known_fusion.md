@@ -1,6 +1,7 @@
 ## known_fusion:一个关于Vmware、gitlab、jenkins的集成项目。
 
 ### 第一步：centos以及vm的安装
+centos的下载请到itellyou官网，具体网址见tools.md   
 1. 组网：桥接模式(常用)：和物理机组为局域网 ; NAT模式：和外部本机电脑当作路由器
 2. 组网可能可能还会遇到IP变化和网段问题，在VMware中编辑菜单-虚拟网络编辑器，选择网络模式，进行下边子网IP和子网掩码、DHCP设置。  
 3. 通过ip addr查看ip.IP地址可能每次启动会重新跳动，可通过百度自行设置固定（在linux中vim配置进行设置IP固定）。
