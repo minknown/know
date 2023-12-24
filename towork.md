@@ -1,4 +1,32 @@
-#towork
+
+# tosearch
+````xml
+//以下是支持中文编码搜索，如果只是纯英文可见mainjs/search_text_in_files.rar工具。
+.子程序 __启动窗口_创建完毕
+.局部变量 dir, 文本型, , , 目录
+.局部变量 want, 文本型, , , 搜索内容
+.局部变量 fn, 文本型, , , 搜索文件名变量
+.局部变量 text, 文本型
+.局部变量 i, 整数型
+.局部变量 textok, 逻辑型
+dir ＝ “C:\Users\Administrator\Downloads\know\know”
+fn ＝ 寻找文件 (dir ＋ “\*.md”, 32)
+want ＝ “版本”
+.判断循环首 (fn ≠ “”)
+    .如果真 (fn ≠ “.” 且 fn ≠ “..”)
+        text ＝ 到文本 (编码转换 (读入文件 (dir ＋ “\” ＋ fn), #编码_UTF_8, #编码_GBK, textok))
+        .如果真 (寻找文本 (text, want, , 假) ＞ -1)
+            i ＝ i ＋ 1
+            调试输出 (“[RE][” ＋ 到文本 (i) ＋ “]” ＋ fn)
+        .如果真结束
+    .如果真结束
+    fn ＝ 寻找文件 (, 32)
+.判断循环尾 ()
+结束 ()
+````
+
+
+# towork
 
 + IDEA：IDEA安装、插件、Maven源更换、项目结构，注释，文档，命名规范：见idea.md：需要根据流程操作一遍.
   
