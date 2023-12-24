@@ -36,9 +36,13 @@ want ＝ “版本”
   2.添加一个Mapper/pojo,pojo需要@TableName(tablename),Mapper为接口且继承BaseMapper。    
   3.在启动入口@SpringBootApplication下添加MapperScan（到Mapper的目录，右键Mapper文件夹Copy包名字）。   
   4.注意mysql版本和pom中驱动版本以及SpringBoot版本问题，然后在控制类中做扫描即可。    
-  5.注意：自定义语句写在Mapper中，@Select("select * from cai where id=22")public List<Cai> gethj();   
+  5.注意：自定义语句写在Mapper中，@Select("select * from cai where id=22")public List<Cai> gethj();
   
-  ````java
+   ````java
+  	//pom.xml:Springboot:2.7.8,java、jdk=17,
+	<groupId>com.baomidou</groupId><artifactId>mybatis-plus-boot-starter</artifactId><version>3.4.1</version>
+  	<groupId>mysql</groupId><artifactId>mysql-connector-java</artifactId><version>5.1.47</version>
+
         @Controller
         public class hello {
             @Autowired
