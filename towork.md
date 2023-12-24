@@ -30,7 +30,7 @@
   ````
 
 + hutools
-  见https://www.hutool.cn/的参考文档
+  见 https://www.hutool.cn/ 的参考文档。     
   
   1.时间戳
   
@@ -66,6 +66,7 @@
   ````
 
   
-+ 微服务
++ 微服务和kafka    
+  见cloudh.md和kafka.md   
   
 + 其他：REDIS\WEB\Spring\系统
