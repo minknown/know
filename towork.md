@@ -38,10 +38,14 @@
   System.out.println(System.currentTimeMillis());//毫秒级13位
 	System.out.println(new Date().getTime());//毫秒级13位
 	int x=(int)(System.currentTimeMillis()/1000);//没有毫秒级10位
-  System.out.println(x);
+  	System.out.println(x);
+  	//输出具有一定格式的时间字符串
+  	Date datedate = new Date();
+	SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd :hh:mm:ss");
+	System.out.println(dateFormat.format(datedate));
   ````
-  2.转化
-  String.valueOf()一般转化为文本，或者Long.valueOf将其他转为Long，其他元素集合SET对象LIST转化再讨论。    
+  2.转化    
+  String.valueOf()一般转化为文本，或者Long.valueOf将其他转为Long，其他元素集合SET对象LIST转化再讨论。     
   3.序列化
 
   ````java
