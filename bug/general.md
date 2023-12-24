@@ -37,3 +37,10 @@ Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
 >加一个scanmapper，mapper注解两个都需要;
 
 
+````
+Mybaits-plus遇到的问题：
+java.sql.SQLNonTransientConnectionException: CLIENT_PLUGIN_AUTH is required
+java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'hello':
+````
+>一个pom中mysql驱动版本的问题，另一个是springboot版本兼容问题，可以下调到2.7.8问题（bean类关键字的提示都可能是这个问题导致）。
